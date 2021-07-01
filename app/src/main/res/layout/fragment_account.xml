@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AccountFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/hiLabel"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Личный кабинет"
+        android:textSize="25sp"
+        android:textColor="@color/food_color_200"
+        android:textAlignment="center"
+        />
+    <EditText
+        android:id="@+id/nameSurname"
+        app:layout_constraintTop_toBottomOf="@id/hiLabel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="20sp"
+        android:padding="7dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="25dp"
+        android:enabled="false"
+        android:text="qqq"
+        android:textColor="@color/black"
+        android:background="@drawable/edit_text_style"
+        />
+    <EditText
+        android:id="@+id/telNumberAcc"
+        app:layout_constraintTop_toBottomOf="@id/nameSurname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:textSize="20sp"
+        android:padding="7dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="25dp"
+        android:enabled="false"
+        android:text="qqq"
+        android:hint="Номер телефона"
+        android:textColor="@color/black"
+        android:background="@drawable/edit_text_style"
+        android:digits="+1234567890"
+        android:maxLength="12"
+        android:singleLine="true"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputTextLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/telNumberAcc"
+        app:layout_constraintEnd_toStartOf="@id/editPassword"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        app:hintEnabled="false"
+        android:layout_marginTop="25dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userPasswordAсс"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="20sp"
+            android:paddingStart="10dp"
+            android:enabled="false"
+            android:paddingEnd="40dp"
+            android:inputType="textPassword"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_style"
+            android:hint="Пароль"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:maxLength="20"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/editPassword"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/ic_edit_profile"
+        app:layout_constraintTop_toBottomOf="@id/telNumberAcc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/inputTextLayout"
+        />
+
+    <Button
+        android:id="@+id/applyBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/exitBtn"
+        app:layout_constraintTop_toBottomOf="@id/inputTextLayout"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_style"
+        android:text="Сохранить"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/exitBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/applyBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputTextLayout"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_style"
+        android:text="Выйти"
+        android:textColor="@color/white"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
